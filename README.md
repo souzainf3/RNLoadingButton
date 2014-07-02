@@ -5,7 +5,7 @@
 
 ## Purpose
 
-An easy-to-use UIStepper subclass that implements a counter within the control
+An easy-to-use UIButton subclass that implements a loading with aligment options.
 
 ##### Let's see example
 
