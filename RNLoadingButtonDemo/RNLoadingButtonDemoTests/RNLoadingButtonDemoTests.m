@@ -1,6 +1,6 @@
 //
-//  RNLoadingButtonTests.m
-//  RNLoadingButtonTests
+//  RNLoadingButtonDemoTests.m
+//  RNLoadingButtonDemoTests
 //
 //  Created by Romilson Nunes on 02/07/14.
 //  Copyright (c) 2014 Romilson Nunes. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface RNLoadingButtonTests : XCTestCase
+@interface RNLoadingButtonDemoTests : XCTestCase
 
 @end
 
-@implementation RNLoadingButtonTests
+@implementation RNLoadingButtonDemoTests
 
 - (void)setUp
 {

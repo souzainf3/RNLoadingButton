@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>RNLoadingButton.xcscheme</key>
+		<key>RNLoadingButtonDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00D9E1F6196473BE00503BEA</key>
+		<key>00D9E237196475B200503BEA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>00D9E217196473BE00503BEA</key>
+		<key>00D9E258196475B200503BEA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

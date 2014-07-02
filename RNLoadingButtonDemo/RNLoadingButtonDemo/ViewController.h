@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  RNLoadingButton
+//  RNLoadingButtonDemo
 //
 //  Created by Romilson Nunes on 02/07/14.
 //  Copyright (c) 2014 Romilson Nunes. All rights reserved.
