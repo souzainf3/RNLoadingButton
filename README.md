@@ -17,20 +17,20 @@ An easy-to-use UIStepper subclass that implements a counter within the control
 To run the example project; clone the repo, and open the demo project
 
 ## Requirements
-iOS 7
+iOS 5
 
 ## Installation
 
-SAStepperControl is available through [CocoaPods](http://cocoapods.org), to install
+RNLoadingButton is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
 
-    pod "SAStepperControl"
+    pod 'RNLoadingButton', '~> 0.0.1'
 
 ## Author
 
-shams-ahmed, shamsahmed@me.com
+Romilson Nunes, souzainf3@yahoo.com.br
 
 ## License
 
-SAStepperControl is available under the MIT license. See the LICENSE file for more info.
+RNLoadingButton is available under the MIT license. See the LICENSE file for more info.
 
