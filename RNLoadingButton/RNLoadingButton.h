@@ -1,7 +1,7 @@
 //
-//  RNButtonWithLoading.h
+//  RNLoadingButton.h
 //
-//  Created by Storm on 22/04/13.
+//  Created by Romilson on 22/04/13.
 //  Copyright (c) 2013 Romilson Nunes. All rights reserved.
 //
 
@@ -11,13 +11,13 @@
 
 
 typedef enum {
-    RNButtonWithLoadingAlignmentLeft      = 0,
-    RNButtonWithLoadingAlignmentCenter    = 1,
-    RNButtonWithLoadingAlignmentRight     = 2,
-} RNButtonWithLoadingAlignment;
+    RNLoadingButtonAlignmentLeft      = 0,
+    RNLoadingButtonAlignmentCenter    = 1,
+    RNLoadingButtonAlignmentRight     = 2,
+} RNLoadingButtonAlignment;
 
 
-@interface RNButtonWithLoading : UIButton
+@interface RNLoadingButton : UIButton
 
 @property (nonatomic, readwrite) BOOL loading;
 
@@ -30,6 +30,6 @@ typedef enum {
 
 - (void)setActivityIndicatorStyle:(UIActivityIndicatorViewStyle)indicatorStyle forState:(UIControlState)__state;
 - (UIActivityIndicatorViewStyle)activityIndicatorStyleForState:(UIControlState)__state;
-- (void)setActivityIndicatorAlignment:(RNButtonWithLoadingAlignment)_aligment;
+- (void)setActivityIndicatorAlignment:(RNLoadingButtonAlignment)_aligment;
 
 @end

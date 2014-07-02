@@ -162,7 +162,8 @@
 				00D9E2711964773100503BEA /* RNLoadingButton.h */,
 				00D9E2721964773100503BEA /* RNLoadingButton.m */,
 			);
-			path = RNLoadingButton;
+			name = RNLoadingButton;
+			path = ../RNLoadingButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

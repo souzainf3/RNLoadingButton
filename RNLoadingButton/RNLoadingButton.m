@@ -1,14 +1,14 @@
 //
-//  RNButtonWithLoading.m
+//  RNLoadingButton.m
 //
-//  Created by Storm on 22/04/13.
+//  Created by Romilson on 22/04/13.
 //  Copyright (c) 2013 Romilson Nunes. All rights reserved.
 //
 
-#import "RNButtonWithLoading.h"
+#import "RNLoadingButton.h"
 
-@interface RNButtonWithLoading(){
-    RNButtonWithLoadingAlignment _activityIndicatorAlignment;
+@interface RNLoadingButton(){
+    RNLoadingButtonAlignment _activityIndicatorAlignment;
 }
 
 
@@ -31,7 +31,7 @@
 
 
 
-@implementation RNButtonWithLoading
+@implementation RNLoadingButton
 @synthesize loading=_loading;
 @synthesize hideImageWhenLoading=_hideImageWhenLoading;
 @synthesize hideTextWhenLoading =_hideTextWhenLoading;
@@ -49,14 +49,6 @@
     [self removeObserver:self forKeyPath:@"self.state"];
     [self removeObserver:self forKeyPath:@"self.selected"];
     [self removeObserver:self forKeyPath:@"self.highlighted"];
-
-    RN_RELEASE(_activityIndicator);
-    
-    RN_RELEASE(_imagens);
-    RN_RELEASE(_texts);
-    RN_RELEASE(_indicatorStyles);
-    
-    [super dealloc];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -110,7 +102,7 @@
     _loading = NO;
     _hideImageWhenLoading = YES;
     _hideTextWhenLoading  = YES;
-    _activityIndicatorAlignment = RNButtonWithLoadingAlignmentCenter;
+    _activityIndicatorAlignment = RNLoadingButtonAlignmentCenter;
     _activityIndicatorEdgeInsets = UIEdgeInsetsZero;
     
     self.adjustsImageWhenHighlighted = NO;
@@ -305,7 +297,7 @@ const CGFloat kTextBottomOffset = -15;
 }
 
 
--(void)setActivityIndicatorAlignment:(RNButtonWithLoadingAlignment)_aligment {
+-(void)setActivityIndicatorAlignment:(RNLoadingButtonAlignment)_aligment {
     _activityIndicatorAlignment = _aligment;
     [self setNeedsLayout];
 }
@@ -317,19 +309,19 @@ const CGFloat kTextBottomOffset = -15;
     frame.origin.y = ((self.frame.size.height - frame.size.height) / 2);
     
     switch (_activityIndicatorAlignment) {
-        case RNButtonWithLoadingAlignmentLeft:
+        case RNLoadingButtonAlignmentLeft:
         {
             //UIEdgeInsetsMake(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right)
             frame.origin.x = _activityIndicatorEdgeInsets.left;
-            frame.origin.y = _activityIndicatorEdgeInsets.top;
+//            frame.origin.y = _activityIndicatorEdgeInsets.top;
         }
             break;
-        case RNButtonWithLoadingAlignmentCenter:
+        case RNLoadingButtonAlignmentCenter:
         {
             frame.origin.x = ((self.frame.size.width - frame.size.width) / 2);
         }
             break;
-        case RNButtonWithLoadingAlignmentRight:
+        case RNLoadingButtonAlignmentRight:
         {
             
             float lengthOccupied = 0;
