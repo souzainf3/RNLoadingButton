@@ -26,7 +26,7 @@ To run the example project; clone the repo, and open the demo project
 
 ## Usage
 
-#####import "RNLoadingButton.h"
+#### \#import "RNLoadingButton.h"
 
 ```objective-c
     btnLeftLoading.hideTextWhenLoading = NO;
