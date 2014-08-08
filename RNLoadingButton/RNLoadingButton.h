@@ -23,7 +23,7 @@ typedef enum {
 
 @property(nonatomic, readonly) UIActivityIndicatorView *activityIndicator;
 
-@property(nonatomic) UIEdgeInsets activityIndicatorEdgeInsets;              // default is UIEdgeInsetsZero
+@property(nonatomic) UIEdgeInsets activityIndicatorEdgeInsets; // default is UIEdgeInsetsZero
 
 @property(nonatomic, readwrite) BOOL hideImageWhenLoading; // Default YES
 @property(nonatomic, readwrite) BOOL hideTextWhenLoading; // Default YES

@@ -10,9 +10,8 @@
 #import "RNLoadingButton.h"
 
 @interface ViewController () {
-    IBOutlet RNLoadingButton *btnLeftLoading;
-    IBOutlet RNLoadingButton *btnRightLoading;
-    IBOutlet RNLoadingButton *btnCenterLoading;
+    IBOutlet RNLoadingButton *btn1;
+    IBOutlet RNLoadingButton *btn2;
 }
 
 @end
@@ -34,27 +33,52 @@
 
 - (void) setup {
     
-    btnLeftLoading.hideTextWhenLoading = NO;
-    btnLeftLoading.loading = YES;
-    [btnLeftLoading setActivityIndicatorAlignment:(RNLoadingButtonAlignmentLeft)];
-    [btnLeftLoading setActivityIndicatorStyle:(UIActivityIndicatorViewStyleGray) forState:(UIControlStateDisabled)];
-//    btnFacebook.activityIndicatorEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
+    btn1.hideTextWhenLoading = NO;
+    btn1.loading = NO;
+    [btn1 setActivityIndicatorAlignment:RNLoadingButtonAlignmentRight];
+    btn1.activityIndicatorEdgeInsets = UIEdgeInsetsMake(0, 50, 0, 10);
+    [btn1 setTitleColor:[UIColor colorWithWhite:0.673 alpha:1.0] forState: UIControlStateDisabled];
+    [btn1 setTitle:@"connecting           " forState:UIControlStateDisabled];
     
     
-    btnRightLoading.hideTextWhenLoading = NO;
-    btnRightLoading.loading = YES;
-    [btnRightLoading setActivityIndicatorAlignment:(RNLoadingButtonAlignmentRight)];
-    [btnRightLoading setActivityIndicatorStyle:(UIActivityIndicatorViewStyleGray) forState:(UIControlStateDisabled)];
-    btnRightLoading.activityIndicatorEdgeInsets = UIEdgeInsetsMake(0, 200, 0, 10);              // default is UIEdgeInsetsZero
-    [btnRightLoading setTitle:@"Disabled state" forState:UIControlStateDisabled];
-    [btnRightLoading setTitleColor:[UIColor colorWithWhite:0.673 alpha:1.000] forState:UIControlStateDisabled];
-    [btnRightLoading setEnabled:NO];
-    
-    
-    btnCenterLoading.hideTextWhenLoading = YES;
-    btnCenterLoading.loading = YES;
-    [btnCenterLoading setActivityIndicatorAlignment:(RNLoadingButtonAlignmentCenter)];
+    btn2.hideTextWhenLoading = NO;
+    btn2.loading = NO;
+    [btn2 setActivityIndicatorAlignment:RNLoadingButtonAlignmentLeft];
+    [btn2 setActivityIndicatorStyle:UIActivityIndicatorViewStyleGray forState:UIControlStateDisabled];
+    btn2.activityIndicatorEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    [btn2 setTitle:@"Loading" forState:UIControlStateDisabled];
     
 }
+
+- (IBAction) buttonTapAction:(RNLoadingButton *)button {
+    
+    button.loading = !button.loading;
+    [button setActivityIndicatorAlignment:RNLoadingButtonAlignmentCenter];
+    button.hideImageWhenLoading = YES;
+    
+}
+
+
+- (IBAction) doTap:(RNLoadingButton *)sender {
+    
+    sender.enabled = NO;
+    sender.loading = YES;
+    
+    if (sender.tag == 3) {
+        sender.hideImageWhenLoading = YES;
+    }
+    
+        
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        sender.enabled = YES;
+        sender.loading = NO;
+        
+        if (sender.tag == 3) {
+            sender.selected = !sender.selected;
+        }
+    });
+
+}
+
 
 @end
