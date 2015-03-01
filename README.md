@@ -1,13 +1,20 @@
 # RNLoadingButton
 
 
-## Purpose
+Used in [Zee - Personal Finances](https://itunes.apple.com/us/app/id422694086).
 
-An easy-to-use UIButton subclass that implements a loading with aligment options.
 
-##### Let's see example
+![https://itunes.apple.com/us/app/id422694086](https://raw.githubusercontent.com/souzainf3/RNActivityView/master/Demo/Screens/qrcode.png)
 
-![Screenshot:](Assets/example1.gif)
+
+An easy-to-use UIButton subclass with an activity indicator.
+
+The activity state is configurable and can hide the image or text while the activity indicator is displaying .
+You can Also choose the position of easily activity indicator or Set It up with a spacing.
+
+[![](https://raw.githubusercontent.com/souzainf3/RNLoadingButton-Swift/master/RNLoadingButtonDemo/Screens/screen1.png)](https://raw.githubusercontent.com/souzainf3/RNLoadingButton-Swift/master/RNLoadingButtonDemo/Screens/screen1.png)
+[![](https://raw.githubusercontent.com/souzainf3/RNLoadingButton-Swift/master/RNLoadingButtonDemo/Screens/screen2.png)](https://raw.githubusercontent.com/souzainf3/RNLoadingButton-Swift/master/RNLoadingButtonDemo/Screens/screen2.png)
+
 
 ## Requirements
 iOS 5
