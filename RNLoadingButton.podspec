@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "RNLoadingButton"
   s.version      = "0.0.1"
-  s.summary      = "A UIButton subclass with loading animation"
+  s.summary      = "An easy-to-use UIButton subclass with an activity indicator"
   s.description  = <<-DESC
                    RNLoadingButton offers alignment "loading" options, hide text or image while loading the animation is running.
                    DESC
