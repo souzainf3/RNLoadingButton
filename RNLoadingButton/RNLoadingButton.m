@@ -109,26 +109,26 @@
     
     //self.imagens = [NSMutableDictionary new];
     self.texts         = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                          [super titleForState:UIControlStateNormal], [NSString stringWithFormat:@"%d",UIControlStateNormal],
-                          [super titleForState:UIControlStateHighlighted], [NSString stringWithFormat:@"%d",UIControlStateHighlighted],
-                          [super titleForState:UIControlStateDisabled], [NSString stringWithFormat:@"%d",UIControlStateDisabled],
-                          [super titleForState:UIControlStateSelected], [NSString stringWithFormat:@"%d",UIControlStateSelected],
+                          [super titleForState:UIControlStateNormal], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateNormal],
+                          [super titleForState:UIControlStateHighlighted], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateHighlighted],
+                          [super titleForState:UIControlStateDisabled], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateDisabled],
+                          [super titleForState:UIControlStateSelected], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateSelected],
                           nil];
     //titleForState
     
     self.imagens           =  [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                               [super imageForState:UIControlStateNormal], [NSString stringWithFormat:@"%d",UIControlStateNormal],
-                               [super imageForState:UIControlStateHighlighted], [NSString stringWithFormat:@"%d",UIControlStateHighlighted],
-                               [super imageForState:UIControlStateDisabled], [NSString stringWithFormat:@"%d",UIControlStateDisabled],
-                               [super imageForState:UIControlStateSelected], [NSString stringWithFormat:@"%d",UIControlStateSelected],
+                               [super imageForState:UIControlStateNormal], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateNormal],
+                               [super imageForState:UIControlStateHighlighted], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateHighlighted],
+                               [super imageForState:UIControlStateDisabled], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateDisabled],
+                               [super imageForState:UIControlStateSelected], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateSelected],
                                nil];
     
     //self.indicatorStyles = [NSMutableDictionary new];
     self.indicatorStyles = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                            [NSNumber numberWithInt:UIActivityIndicatorViewStyleGray], [NSString stringWithFormat:@"%d",UIControlStateNormal],
-                            [NSNumber numberWithInt:UIActivityIndicatorViewStyleGray], [NSString stringWithFormat:@"%d",UIControlStateHighlighted],
-                            [NSNumber numberWithInt:UIActivityIndicatorViewStyleGray], [NSString stringWithFormat:@"%d",UIControlStateDisabled],
-                            [NSNumber numberWithInt:UIActivityIndicatorViewStyleGray], [NSString stringWithFormat:@"%d",UIControlStateSelected],
+                            [NSNumber numberWithInt:UIActivityIndicatorViewStyleGray], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateNormal],
+                            [NSNumber numberWithInt:UIActivityIndicatorViewStyleGray], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateHighlighted],
+                            [NSNumber numberWithInt:UIActivityIndicatorViewStyleGray], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateDisabled],
+                            [NSNumber numberWithInt:UIActivityIndicatorViewStyleGray], [NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateSelected],
                             nil];
 
     
@@ -372,26 +372,26 @@ const CGFloat kTextBottomOffset = -15;
 
 - (void) setValue:(id)value inDictionary:(NSMutableDictionary*)dictionary forControlState:(UIControlState)controlState {
 	if (value) {
-		[dictionary setValue:value forKey:[NSString stringWithFormat:@"%d",controlState]];
+		[dictionary setValue:value forKey:[NSString stringWithFormat:@"%lu",controlState]];
 	} else {
-        [dictionary removeObjectForKey:[NSString stringWithFormat:@"%d",controlState]];
+        [dictionary removeObjectForKey:[NSString stringWithFormat:@"%lu",controlState]];
 	}
     
 	[self configureViewForControlState:[self currentControlState]];
 }
 
 - (id) getValueFromDictionary:(NSMutableDictionary*)dictionary forControlState:(UIControlState)controlState {
-	if ([dictionary valueForKey:[NSString stringWithFormat:@"%d",controlState]]) {
-		return [dictionary valueForKey:[NSString stringWithFormat:@"%d",controlState]];
+	if ([dictionary valueForKey:[NSString stringWithFormat:@"%lu",controlState]]) {
+		return [dictionary valueForKey:[NSString stringWithFormat:@"%lu",controlState]];
 	}
     
     
-	if ((controlState & UIControlStateSelected) && [dictionary valueForKey:[NSString stringWithFormat:@"%d",UIControlStateSelected]]) {
-		return [dictionary valueForKey:[NSString stringWithFormat:@"%d",UIControlStateSelected]];
-	} else if ((controlState & UIControlStateHighlighted) && [dictionary valueForKey:[NSString stringWithFormat:@"%d", UIControlStateHighlighted]]) {
-		return [dictionary valueForKey:[NSString stringWithFormat:@"%d", UIControlStateHighlighted]];
+	if ((controlState & UIControlStateSelected) && [dictionary valueForKey:[NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateSelected]]) {
+		return [dictionary valueForKey:[NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateSelected]];
+	} else if ((controlState & UIControlStateHighlighted) && [dictionary valueForKey:[NSString stringWithFormat:@"%lu", (unsigned long)UIControlStateHighlighted]]) {
+		return [dictionary valueForKey:[NSString stringWithFormat:@"%lu", (unsigned long)UIControlStateHighlighted]];
 	} else {
-		return [dictionary valueForKey:[NSString stringWithFormat:@"%d",UIControlStateNormal]];
+		return [dictionary valueForKey:[NSString stringWithFormat:@"%lu",(unsigned long)UIControlStateNormal]];
 	}
 }
 

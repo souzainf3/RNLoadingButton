@@ -10,29 +10,29 @@
 	<string>RNLoadingButtonDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D3A8CA6E-87A8-45F5-9DF0-34F8216D898A</key>
-		<string>ssh://bitbucket.org/souzainf3/rnloadingbutton.git</string>
+		<key>76350424EAC087FA0ADC629242A83A9A5ACA0AFF</key>
+		<string>https://github.com/souzainf3/RNLoadingButton.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RNLoadingButtonDemo/RNLoadingButtonDemo.xcodeproj/project.xcworkspace</string>
+	<string>RNLoadingButtonDemo/RNLoadingButtonDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D3A8CA6E-87A8-45F5-9DF0-34F8216D898A</key>
+		<key>76350424EAC087FA0ADC629242A83A9A5ACA0AFF</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://bitbucket.org/souzainf3/rnloadingbutton.git</string>
+	<string>https://github.com/souzainf3/RNLoadingButton.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D3A8CA6E-87A8-45F5-9DF0-34F8216D898A</string>
+	<string>76350424EAC087FA0ADC629242A83A9A5ACA0AFF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D3A8CA6E-87A8-45F5-9DF0-34F8216D898A</string>
+			<string>76350424EAC087FA0ADC629242A83A9A5ACA0AFF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RNLoadingButton</string>
 		</dict>
